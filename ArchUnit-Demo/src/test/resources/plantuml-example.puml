@@ -1,0 +1,10 @@
+@startuml
+
+[Frontend] <<..frontend..>> as frontend
+[Backend] <<..backend..>> as backend
+[API] <<..api..>> as api
+
+frontend --> api
+backend --> api
+
+@enduml
