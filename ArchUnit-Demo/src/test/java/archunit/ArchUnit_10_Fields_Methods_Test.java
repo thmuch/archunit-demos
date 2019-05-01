@@ -8,23 +8,21 @@ import org.junit.Test;
 
 import javax.persistence.Entity;
 
-import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.all;
-import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.no;
-import static extensions.ClassTransformers.fields;
-import static extensions.ClassTransformers.methods;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.methods;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noFields;
 import static extensions.Conditions.beAccessedFromTestClassesOnly;
 import static extensions.Conditions.beAnnotatedWithEagerFetching;
 import static extensions.Predicates.areAnnotatedWith;
 import static extensions.Predicates.belongToAClassAnnotatedWith;
 
-public class ArchUnit_10_Transformer_Test {
+public class ArchUnit_10_Fields_Methods_Test {
 
     @Test
     public void check_fields() {
 
         JavaClasses importedClasses = new ClassFileImporter().importPackages("com.muchsoft");
 
-        ArchRule rule = no(fields())
+        ArchRule rule = noFields()
                 .that(belongToAClassAnnotatedWith(Entity.class))
                 .should(beAnnotatedWithEagerFetching());
 
@@ -36,7 +34,7 @@ public class ArchUnit_10_Transformer_Test {
 
         JavaClasses importedClasses = new ClassFileImporter().importPackages("com.muchsoft");
 
-        ArchRule rule = all(methods())
+        ArchRule rule = methods()
                 .that(areAnnotatedWith(VisibleForTesting.class))
                 .should(beAccessedFromTestClassesOnly());
 

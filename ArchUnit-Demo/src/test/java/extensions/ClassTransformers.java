@@ -12,6 +12,11 @@ import java.util.Set;
 
 public class ClassTransformers {
 
+	/**
+	 * @return
+	 * @deprecated Use ArchRuleDefinition.fields()/noFields() instead (since ArchUnit 0.10)
+	 */
+	@Deprecated
 	public static ClassesTransformer<JavaField> fields() {
 		return new AbstractClassesTransformer<JavaField>( "fields" ) {
 			@Override
@@ -25,6 +30,11 @@ public class ClassTransformers {
 		};
 	}
 
+	/**
+	 * @return
+	 * @deprecated Use ArchRuleDefinition.methods()/noMethods() instead (since ArchUnit 0.10)
+	 */
+	@Deprecated
 	public static ClassesTransformer<JavaMethod> methods() {
 		return new AbstractClassesTransformer<JavaMethod>( "methods" ) {
 			@Override
