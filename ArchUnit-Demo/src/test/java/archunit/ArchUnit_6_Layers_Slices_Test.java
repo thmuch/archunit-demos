@@ -2,19 +2,23 @@ package archunit;
 
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
+import com.tngtech.archunit.junit.AnalyzeClasses;
+import com.tngtech.archunit.junit.ArchTest;
+import com.tngtech.archunit.junit.ArchUnitRunner;
 import com.tngtech.archunit.lang.ArchRule;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 import static com.tngtech.archunit.library.dependencies.SlicesRuleDefinition.slices;
 
+@RunWith(ArchUnitRunner.class)
+@AnalyzeClasses(packages = "com.muchsoft")
 public class ArchUnit_6_Layers_Slices_Test {
 
-    @Test
-    public void adhere_to_layered_architecture() {
-
-        JavaClasses importedClasses = new ClassFileImporter().importPackages("com.muchsoft");
+    @ArchTest
+    public void adhere_to_layered_architecture(JavaClasses importedClasses) {
 
         ArchRule rule = layeredArchitecture()
                 .layer("Frontend").definedBy("..frontend..")
@@ -27,10 +31,8 @@ public class ArchUnit_6_Layers_Slices_Test {
         rule.check(importedClasses);
     }
 
-    @Test
-    public void no_cycles_in_slices() {
-
-        JavaClasses importedClasses = new ClassFileImporter().importPackages("com.muchsoft");
+    @ArchTest
+    public void no_cycles_in_slices(JavaClasses importedClasses) {
 
         ArchRule rule = slices()
                 .matching("com.muchsoft.demo.(*)..")
@@ -39,10 +41,8 @@ public class ArchUnit_6_Layers_Slices_Test {
         rule.check(importedClasses);
     }
 
-    @Test
-    public void no_dependencies_between_slices() {
-
-        JavaClasses importedClasses = new ClassFileImporter().importPackages("com.muchsoft");
+    @ArchTest
+    public void no_dependencies_between_slices(JavaClasses importedClasses) {
 
         ArchRule rule = slices()
                 .matching("com.muchsoft.demo.(*)..")
