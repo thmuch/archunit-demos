@@ -71,23 +71,4 @@ public class Predicates {
 			}
 		};
 	}
-
-	public static DescribedPredicate<JavaField> belongToAClassAnnotatedWith(Class<? extends Annotation> annotationClass) {
-		return new DescribedPredicate<JavaField>(
-				"belong to a class annotated with @" + annotationClass.getSimpleName() ) {
-			@Override
-			public boolean apply(JavaField input) {
-				return input.getOwner().tryGetAnnotationOfType( annotationClass ).isPresent();
-			}
-		};
-	}
-
-	public static DescribedPredicate<JavaMember> areAnnotatedWith(Class<? extends Annotation> annotationClass) {
-		return new DescribedPredicate<JavaMember>( "are annotated with @" + annotationClass.getSimpleName() ) {
-			@Override
-			public boolean apply(JavaMember input) {
-				return input.isAnnotatedWith( annotationClass );
-			}
-		};
-	}
 }
