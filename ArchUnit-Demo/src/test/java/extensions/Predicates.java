@@ -4,13 +4,11 @@ import com.tngtech.archunit.base.DescribedPredicate;
 import com.tngtech.archunit.base.Optional;
 import com.tngtech.archunit.core.domain.JavaClass;
 import com.tngtech.archunit.core.domain.JavaField;
-import com.tngtech.archunit.core.domain.JavaMember;
 
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import java.lang.annotation.Annotation;
 import java.util.Calendar;
 import java.util.Date;
 

@@ -6,10 +6,10 @@ import com.tngtech.archunit.lang.ArchRule;
 import com.tngtech.archunit.lang.Priority;
 import org.junit.Test;
 
-import javax.ejb.Stateful;
 import javax.persistence.Entity;
 
-import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.*;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.priority;
 
 public class JUGH_2_Test {
 

@@ -1,13 +1,11 @@
 package livedemo.jax2019;
 
 import com.tngtech.archunit.core.domain.JavaClasses;
-import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchRules;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.junit.ArchUnitRunner;
 import com.tngtech.archunit.lang.ArchRule;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import javax.ejb.Stateful;

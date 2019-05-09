@@ -3,12 +3,9 @@ package livedemo.jugh;
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.lang.ArchRule;
-import com.tngtech.archunit.lang.Priority;
 import org.junit.Test;
 
-import javax.persistence.Entity;
-
-import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.*;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
 public class JUGH_4_Dependencies_Test {
 

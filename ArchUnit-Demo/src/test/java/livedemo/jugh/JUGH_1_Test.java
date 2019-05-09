@@ -1,10 +1,8 @@
 package livedemo.jugh;
 
-import com.muchsoft.demo.user.api.model.User;
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.lang.ArchRule;
-import com.tngtech.archunit.lang.syntax.elements.ClassesShouldConjunction;
 import org.junit.Test;
 
 import javax.ejb.Stateful;

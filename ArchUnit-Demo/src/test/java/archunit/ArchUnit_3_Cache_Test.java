@@ -1,14 +1,12 @@
 package archunit;
 
 import com.tngtech.archunit.junit.AnalyzeClasses;
-import com.tngtech.archunit.junit.ArchIgnore;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.junit.ArchUnitRunner;
 import com.tngtech.archunit.lang.ArchRule;
 import org.junit.runner.RunWith;
 
 import javax.ejb.Stateful;
-import javax.ejb.Stateless;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;

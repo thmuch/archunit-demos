@@ -1,15 +1,12 @@
 package archunit;
 
 import com.tngtech.archunit.core.domain.JavaClasses;
-import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.junit.ArchUnitRunner;
 import com.tngtech.archunit.lang.ArchRule;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 import static com.tngtech.archunit.library.dependencies.SlicesRuleDefinition.slices;
 

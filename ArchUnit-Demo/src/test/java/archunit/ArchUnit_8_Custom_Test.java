@@ -3,7 +3,6 @@ package archunit;
 import com.tngtech.archunit.base.DescribedPredicate;
 import com.tngtech.archunit.core.domain.JavaClass;
 import com.tngtech.archunit.core.domain.JavaClasses;
-import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.junit.ArchUnitRunner;
@@ -11,12 +10,8 @@ import com.tngtech.archunit.lang.ArchCondition;
 import com.tngtech.archunit.lang.ArchRule;
 import com.tngtech.archunit.lang.ConditionEvents;
 import com.tngtech.archunit.lang.SimpleConditionEvent;
-import com.tngtech.archunit.lang.conditions.ArchConditions;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static com.tngtech.archunit.core.domain.JavaClass.Predicates.resideInAPackage;
-import static com.tngtech.archunit.core.domain.JavaClass.Predicates.simpleNameContaining;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
 @RunWith(ArchUnitRunner.class)
