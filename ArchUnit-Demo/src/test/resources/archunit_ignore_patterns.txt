@@ -1,1 +1,3 @@
-.*UserImpl.*
+# define tolerated violations here (via matching their error messages)
+
+#.*UserImpl.*
