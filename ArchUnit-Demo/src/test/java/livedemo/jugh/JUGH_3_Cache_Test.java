@@ -16,7 +16,7 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
 @RunWith(ArchUnitRunner.class)
 @AnalyzeClasses(packages = "com.muchsoft",cacheMode = CacheMode.PER_CLASS,
-        importOptions = ImportOption.Predefined.DontIncludeTests.class)
+        importOptions = ImportOption.Predefined.DoNotIncludeTests.class)
 public class JUGH_3_Cache_Test {
 
     @ArchTest

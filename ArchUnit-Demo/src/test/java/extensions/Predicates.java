@@ -35,7 +35,7 @@ public class Predicates {
 		return new DescribedPredicate<JavaField>( "are temporal fields (Date or Calendar)" ) {
 			@Override
 			public boolean apply(JavaField input) {
-				return input.getType().isAssignableTo( Date.class ) || input.getType().isAssignableTo( Calendar.class );
+				return input.getRawType().isAssignableTo( Date.class ) || input.getRawType().isAssignableTo( Calendar.class );
 			}
 		};
 	}
