@@ -20,7 +20,8 @@ public class ArchUnit_7_PlantUML_Test {
 
         String plantumlFile = "src/test/resources/plantuml-example.puml";
 
-        ArchRule rule = classes().should(adhereToPlantUmlDiagram(plantumlFile, consideringOnlyDependenciesInDiagram()));
+        ArchRule rule = classes()
+                .should(adhereToPlantUmlDiagram(plantumlFile, consideringOnlyDependenciesInDiagram()));
 
         rule.check(importedClasses);
     }
