@@ -5,8 +5,6 @@ import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.lang.ArchRule;
 import org.junit.Test;
 
-import javax.ejb.Stateful;
-
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
 public class JAXLondon_2_Test {
