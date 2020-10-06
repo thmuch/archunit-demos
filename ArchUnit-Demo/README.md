@@ -8,6 +8,7 @@ You'll find the examples provided by ArchUnit itself [here](https://github.com/T
 
 ## Talks & Slides & Videos
 
+- [JAX London 2020](https://jaxlondon.com/software-architecture-design/archunit-unit-testing-architecture-and-design/), 2020-10-06 ([PDF](https://muchsoft.com/presentations/ArchUnit-JAXLondon-2020.pdf)) 🇬🇧
 - [Java User Group Darmstadt](https://www.jug-da.de/2020/08/ArchUnit/), 2020-08-20 ([PDF](https://muchsoft.com/presentations/ArchUnit-JUGDA-2020.pdf), [Video](https://youtu.be/a3FDqGxVtBs))
 - [Java User Group Ostfalen](https://www.jug-ostfalen.de/event/2020/01/09/archunit.html), 2020-01-09 ([PDF](https://muchsoft.com/presentations/ArchUnit-JUGOstfalen-2020.pdf), [Video](https://www.youtube.com/watch?v=XRjpXkOrh8o&t=513))
 - [JAX 2019](https://jax.de/software-architecture/archunit-architektur-und-design-automatisiert-pruefen/), 2019-05-08 ([PDF](https://muchsoft.com/presentations/ArchUnit-JAX-2019.pdf))
