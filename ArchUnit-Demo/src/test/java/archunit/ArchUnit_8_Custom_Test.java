@@ -54,4 +54,31 @@ public class ArchUnit_8_Custom_Test {
             }
         };
     }
+
+    @ArchTest
+    public void no_static_initializers(JavaClasses importedClasses) {
+
+        ArchRule rule = classes()
+                .that().resideInAPackage("..api..")
+                .should(notContainStaticInitializers());
+
+        rule.check(importedClasses);
+    }
+
+    private ArchCondition<JavaClass> notContainStaticInitializers() {
+        return new ArchCondition<JavaClass>("not contain static initializer blocks") {
+            @Override
+            public void check(JavaClass javaClass, ConditionEvents conditionEvents) {
+
+                if (javaClass.getStaticInitializer().isPresent()) {
+
+                    String message =
+                            String.format("Class %s contains a at least one static initializer block",
+                                    javaClass.getName());
+
+                    conditionEvents.add(SimpleConditionEvent.violated(javaClass,message));
+                }
+            }
+        };
+    }
 }
