@@ -5,16 +5,14 @@ import com.tngtech.archunit.core.domain.JavaClass;
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
-import com.tngtech.archunit.junit.ArchUnitRunner;
 import com.tngtech.archunit.lang.ArchCondition;
 import com.tngtech.archunit.lang.ArchRule;
 import com.tngtech.archunit.lang.ConditionEvents;
 import com.tngtech.archunit.lang.SimpleConditionEvent;
-import org.junit.runner.RunWith;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
-@RunWith(ArchUnitRunner.class)
+//@RunWith(ArchUnitRunner.class) // necessary for JUnit 4
 @AnalyzeClasses(packages = "com.muchsoft")
 public class JAX_6_Custom_Test {
 

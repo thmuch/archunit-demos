@@ -2,16 +2,14 @@ package archunit;
 
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
-import com.tngtech.archunit.junit.ArchUnitRunner;
 import com.tngtech.archunit.lang.ArchRule;
-import org.junit.runner.RunWith;
 
 import javax.ejb.Stateful;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
-@RunWith(ArchUnitRunner.class)
+//@RunWith(ArchUnitRunner.class) // necessary for JUnit 4
 @AnalyzeClasses(packages = "com.muchsoft")
 public class ArchUnit_3_Cache_Test {
 

@@ -4,16 +4,14 @@ import com.tngtech.archunit.core.domain.JavaClass;
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
-import com.tngtech.archunit.junit.ArchUnitRunner;
 import com.tngtech.archunit.lang.ArchRule;
 import com.tngtech.archunit.library.dependencies.SliceAssignment;
 import com.tngtech.archunit.library.dependencies.SliceIdentifier;
-import org.junit.runner.RunWith;
 
 import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 import static com.tngtech.archunit.library.dependencies.SlicesRuleDefinition.slices;
 
-@RunWith(ArchUnitRunner.class)
+//@RunWith(ArchUnitRunner.class) // necessary for JUnit 4
 @AnalyzeClasses(packages = "com.muchsoft")
 public class ArchUnit_6_Layers_Slices_Test {
 

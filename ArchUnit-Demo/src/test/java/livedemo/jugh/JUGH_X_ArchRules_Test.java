@@ -1,11 +1,13 @@
 package livedemo.jugh;
 
-import com.tngtech.archunit.junit.*;
+import com.tngtech.archunit.junit.AnalyzeClasses;
+import com.tngtech.archunit.junit.ArchRules;
+import com.tngtech.archunit.junit.ArchTest;
+import com.tngtech.archunit.junit.CacheMode;
 import com.tngtech.archunit.lang.ArchRule;
 import com.tngtech.archunit.library.GeneralCodingRules;
-import org.junit.runner.RunWith;
 
-@RunWith(ArchUnitRunner.class)
+//@RunWith(ArchUnitRunner.class) // necessary for JUnit 4
 @AnalyzeClasses(packages = "com.muchsoft",cacheMode = CacheMode.PER_CLASS)
 public class JUGH_X_ArchRules_Test {
 

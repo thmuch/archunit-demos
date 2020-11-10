@@ -3,10 +3,8 @@ package livedemo.jugh;
 import com.tngtech.archunit.core.importer.ImportOption;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
-import com.tngtech.archunit.junit.ArchUnitRunner;
 import com.tngtech.archunit.junit.CacheMode;
 import com.tngtech.archunit.lang.ArchRule;
-import org.junit.runner.RunWith;
 
 import javax.ejb.Stateful;
 import javax.persistence.Entity;
@@ -14,7 +12,7 @@ import javax.persistence.Entity;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
-@RunWith(ArchUnitRunner.class)
+//@RunWith(ArchUnitRunner.class) // necessary for JUnit 4
 @AnalyzeClasses(packages = "com.muchsoft",cacheMode = CacheMode.PER_CLASS,
         importOptions = ImportOption.Predefined.DoNotIncludeTests.class)
 public class JUGH_3_Cache_Test {

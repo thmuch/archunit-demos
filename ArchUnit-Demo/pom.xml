@@ -22,10 +22,26 @@
     </build>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.tngtech.archunit/archunit-junit4 -->
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine -->
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.tngtech.archunit/archunit-junit5 -->
         <dependency>
             <groupId>com.tngtech.archunit</groupId>
-            <artifactId>archunit-junit4</artifactId>
+            <artifactId>archunit-junit5</artifactId>
             <version>0.14.1</version>
             <scope>test</scope>
         </dependency>
