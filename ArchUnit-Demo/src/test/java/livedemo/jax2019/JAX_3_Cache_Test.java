@@ -5,8 +5,7 @@ import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchRules;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
-
-import javax.ejb.Stateful;
+import jakarta.ejb.Stateful;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
@@ -33,9 +32,9 @@ public class JAX_3_Cache_Test {
 
     @ArchTest
     public static final ArchRule IMPL_SHOULD_BE_IN_BACKEND =
-                classes().that().haveSimpleNameEndingWith("Impl")
-                .should().resideInAPackage("..backend..")
-                .orShould().beAnnotatedWith(Deprecated.class);
+            classes().that().haveSimpleNameEndingWith("Impl")
+                    .should().resideInAPackage("..backend..")
+                    .orShould().beAnnotatedWith(Deprecated.class);
 
     @ArchTest
     public static final ArchRules TESTS_ANDERSWO = ArchRules.in(JAX_1_Test.class);

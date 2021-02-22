@@ -3,9 +3,8 @@ package livedemo.jax2019;
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.lang.ArchRule;
+import jakarta.ejb.Stateful;
 import org.junit.Test;
-
-import javax.ejb.Stateful;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 

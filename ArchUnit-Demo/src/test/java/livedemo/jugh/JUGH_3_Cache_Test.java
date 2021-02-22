@@ -5,15 +5,14 @@ import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.junit.CacheMode;
 import com.tngtech.archunit.lang.ArchRule;
-
-import javax.ejb.Stateful;
-import javax.persistence.Entity;
+import jakarta.ejb.Stateful;
+import jakarta.persistence.Entity;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
 //@RunWith(ArchUnitRunner.class) // necessary for JUnit 4
-@AnalyzeClasses(packages = "com.muchsoft",cacheMode = CacheMode.PER_CLASS,
+@AnalyzeClasses(packages = "com.muchsoft", cacheMode = CacheMode.PER_CLASS,
         importOptions = ImportOption.Predefined.DoNotIncludeTests.class)
 public class JUGH_3_Cache_Test {
 

@@ -1,6 +1,6 @@
 package com.muchsoft.demo.user.frontend;
 
-import javax.faces.view.ViewScoped;
+import jakarta.faces.view.ViewScoped;
 
 @ViewScoped
 public class UserBean {

@@ -1,6 +1,6 @@
 package com.muchsoft.demo.order.frontend;
 
-import javax.faces.view.ViewScoped;
+import jakarta.faces.view.ViewScoped;
 
 @ViewScoped
 public class OrderBean {
