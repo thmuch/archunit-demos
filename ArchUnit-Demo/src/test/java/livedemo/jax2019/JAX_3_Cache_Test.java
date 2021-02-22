@@ -2,8 +2,8 @@ package livedemo.jax2019;
 
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.junit.AnalyzeClasses;
-import com.tngtech.archunit.junit.ArchRules;
 import com.tngtech.archunit.junit.ArchTest;
+import com.tngtech.archunit.junit.ArchTests;
 import com.tngtech.archunit.lang.ArchRule;
 import jakarta.ejb.Stateful;
 
@@ -37,6 +37,6 @@ public class JAX_3_Cache_Test {
                     .orShould().beAnnotatedWith(Deprecated.class);
 
     @ArchTest
-    public static final ArchRules TESTS_ANDERSWO = ArchRules.in(JAX_1_Test.class);
+    public static final ArchTests TESTS_ANDERSWO = ArchTests.in(JAX_1_Test.class);
 
 }

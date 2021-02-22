@@ -3,8 +3,8 @@ package livedemo.jugda;
 import archunit.ArchUnit_3_Cache_Test;
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.junit.AnalyzeClasses;
-import com.tngtech.archunit.junit.ArchRules;
 import com.tngtech.archunit.junit.ArchTest;
+import com.tngtech.archunit.junit.ArchTests;
 import com.tngtech.archunit.lang.ArchRule;
 import com.tngtech.archunit.lang.Priority;
 import jakarta.ejb.Stateful;
@@ -40,5 +40,5 @@ public class JUGDA_3_Cache_Test {
             .orShould().beAnnotatedWith(Deprecated.class);
 
     @ArchTest
-    public static ArchRules TESTS_ANDERSWO = ArchRules.in(ArchUnit_3_Cache_Test.class);
+    public static ArchTests TESTS_ANDERSWO = ArchTests.in(ArchUnit_3_Cache_Test.class);
 }

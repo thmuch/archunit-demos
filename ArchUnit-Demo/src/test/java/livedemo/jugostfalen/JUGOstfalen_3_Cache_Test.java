@@ -2,8 +2,8 @@ package livedemo.jugostfalen;
 
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.junit.AnalyzeClasses;
-import com.tngtech.archunit.junit.ArchRules;
 import com.tngtech.archunit.junit.ArchTest;
+import com.tngtech.archunit.junit.ArchTests;
 import com.tngtech.archunit.junit.CacheMode;
 import com.tngtech.archunit.lang.ArchRule;
 import jakarta.ejb.Stateful;
@@ -40,6 +40,6 @@ public class JUGOstfalen_3_Cache_Test {
             .orShould().beAnnotatedWith(Deprecated.class);
 
     @ArchTest
-    public static ArchRules REGELN_VON_ANDERSWO = ArchRules.in(JUGOstfalen_1_Test.class);
+    public static ArchTests REGELN_VON_ANDERSWO = ArchTests.in(JUGOstfalen_1_Test.class);
 
 }
