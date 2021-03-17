@@ -6,9 +6,12 @@ import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
 import com.tngtech.archunit.thirdparty.com.google.common.annotations.VisibleForTesting;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 
-import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.methods;
-import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noFields;
+import java.util.List;
+
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.*;
 import static extensions.Conditions.beAccessedFromTestClassesOnly;
 import static extensions.Conditions.beAnnotatedWithEagerFetching;
 
@@ -18,6 +21,17 @@ public class ArchUnit_10_Fields_Methods_Test {
 
     @ArchTest
     public void check_fields(JavaClasses importedClasses) {
+
+        ArchRule rule = fields()
+                .that().areAnnotatedWith(OneToMany.class)
+                .or().areAnnotatedWith(ManyToMany.class)
+                .should().notHaveRawType(List.class);
+
+        rule.check(importedClasses);
+    }
+
+    @ArchTest
+    public void check_fields_custom_condition(JavaClasses importedClasses) {
 
         ArchRule rule = noFields()
                 .that().areDeclaredInClassesThat().areAnnotatedWith(Entity.class)
