@@ -18,7 +18,7 @@ public class Predicates {
         return new DescribedPredicate<JavaClass>("no SINGLE_TABLE inheritance") {
             @Override
             public boolean apply(JavaClass input) {
-                for (JavaClass sc : input.getAllSuperClasses()) {
+                for (JavaClass sc : input.getAllRawSuperclasses()) {
                     Optional<Inheritance> inheritance = sc.tryGetAnnotationOfType(Inheritance.class);
                     if (inheritance.isPresent()) {
                         if (inheritance.get().strategy() == InheritanceType.SINGLE_TABLE) {
