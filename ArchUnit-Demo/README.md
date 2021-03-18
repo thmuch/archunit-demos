@@ -8,6 +8,7 @@ You'll find the examples provided by ArchUnit itself [here](https://github.com/T
 
 ## Talks & Slides & Videos
 
+- [GEDOPLAN Expertenkreis Java](https://gedoplan.de/java-events/), 2021-03-18 ([PDF](https://muchsoft.com/presentations/ArchUnit-GEDOPLAN-2021.pdf))
 - [Java User Group Switzerland](https://www.jug.ch/html/events/2020/archunit.html), 2020-10-29 ([PDF](https://muchsoft.com/presentations/ArchUnit-JUGCH-2020.pdf), [Video](https://www.youtube.com/watch?v=_ZUtb_hsm4Q&t=263)) 🇬🇧
 - [JCON 2020](https://jcon.one/en/), 2020-10-28 ([PDF](https://muchsoft.com/presentations/ArchUnit-JCON-2020.pdf), [Video](https://www.youtube.com/watch?v=K3AvAVpxhx0)) 🇬🇧
 - [JAX London 2020](https://jaxlondon.com/software-architecture-design/archunit-unit-testing-architecture-and-design/), 2020-10-06 ([PDF](https://muchsoft.com/presentations/ArchUnit-JAXLondon-2020.pdf)) 🇬🇧
