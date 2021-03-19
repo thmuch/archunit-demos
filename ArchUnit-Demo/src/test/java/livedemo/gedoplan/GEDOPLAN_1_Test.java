@@ -34,7 +34,7 @@ public class GEDOPLAN_1_Test {
 
         ArchRule rule = classes()
                 .should().notBeAnnotatedWith(Stateful.class)
-                .because("they don't scale well (see adr/no-stateful-ejb.md)");
+                .because("they don't scale well (see docs/adr/0000-do-not-use-stateful-ejb.md)");
 
         rule.check(importedClasses);
     }
