@@ -30,7 +30,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.7.1</version>
+            <version>5.7.2</version>
             <scope>test</scope>
         </dependency>
 
@@ -38,7 +38,7 @@
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>5.7.1</version>
+            <version>5.7.2</version>
             <scope>test</scope>
         </dependency>
 
@@ -46,7 +46,7 @@
         <dependency>
             <groupId>com.tngtech.archunit</groupId>
             <artifactId>archunit-junit5</artifactId>
-            <version>0.18.0</version>
+            <version>0.19.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -70,7 +70,7 @@
         <dependency>
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-api</artifactId>
-            <version>9.0.0</version>
+            <version>9.1.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
