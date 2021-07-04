@@ -46,7 +46,7 @@
         <dependency>
             <groupId>com.tngtech.archunit</groupId>
             <artifactId>archunit-junit5</artifactId>
-            <version>0.19.0</version>
+            <version>0.20.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -54,7 +54,7 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.19.0</version>
+            <version>3.20.2</version>
             <scope>test</scope>
         </dependency>
 
@@ -62,7 +62,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.30</version>
+            <version>1.7.31</version>
             <scope>test</scope>
         </dependency>
 
