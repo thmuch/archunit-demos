@@ -1,7 +1,6 @@
 package extensions;
 
 import com.tngtech.archunit.base.DescribedPredicate;
-import com.tngtech.archunit.base.Optional;
 import com.tngtech.archunit.core.domain.JavaClass;
 import com.tngtech.archunit.core.domain.JavaField;
 import jakarta.persistence.Inheritance;
@@ -11,13 +10,14 @@ import jakarta.persistence.TemporalType;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Optional;
 
 public class Predicates {
 
     public static DescribedPredicate<JavaClass> doNotHaveSingleTableInheritance() {
         return new DescribedPredicate<JavaClass>("no SINGLE_TABLE inheritance") {
             @Override
-            public boolean apply(JavaClass input) {
+            public boolean test(JavaClass input) {
                 for (JavaClass sc : input.getAllRawSuperclasses()) {
                     Optional<Inheritance> inheritance = sc.tryGetAnnotationOfType(Inheritance.class);
                     if (inheritance.isPresent()) {
@@ -34,7 +34,7 @@ public class Predicates {
     public static DescribedPredicate<JavaField> areTemporalFields() {
         return new DescribedPredicate<JavaField>("are temporal fields (Date or Calendar)") {
             @Override
-            public boolean apply(JavaField input) {
+            public boolean test(JavaField input) {
                 return input.getRawType().isAssignableTo(Date.class) || input.getRawType().isAssignableTo(Calendar.class);
             }
         };
@@ -43,7 +43,7 @@ public class Predicates {
     public static DescribedPredicate<JavaField> areTemporalTimestampFields() {
         return new DescribedPredicate<JavaField>("are timestamps (are annotated with temporal timestamp)") {
             @Override
-            public boolean apply(JavaField input) {
+            public boolean test(JavaField input) {
                 Optional<Temporal> temporal = input.tryGetAnnotationOfType(Temporal.class);
                 return (temporal.isPresent() && temporal.get().value() == TemporalType.TIMESTAMP);
             }
@@ -53,7 +53,7 @@ public class Predicates {
     public static DescribedPredicate<JavaField> areTemporalDateFields() {
         return new DescribedPredicate<JavaField>("are dates (are annotated with temporal date)") {
             @Override
-            public boolean apply(JavaField input) {
+            public boolean test(JavaField input) {
                 Optional<Temporal> temporal = input.tryGetAnnotationOfType(Temporal.class);
                 return temporal.isPresent() && temporal.get().value() == TemporalType.DATE;
             }
@@ -63,7 +63,7 @@ public class Predicates {
     public static DescribedPredicate<JavaField> areTemporalTimeFields() {
         return new DescribedPredicate<JavaField>("are times (are annotated with temporal time)") {
             @Override
-            public boolean apply(JavaField input) {
+            public boolean test(JavaField input) {
                 Optional<Temporal> temporal = input.tryGetAnnotationOfType(Temporal.class);
                 return temporal.isPresent() && temporal.get().value() == TemporalType.TIME;
             }

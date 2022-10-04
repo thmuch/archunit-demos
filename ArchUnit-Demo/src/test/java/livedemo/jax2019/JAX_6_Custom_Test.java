@@ -47,7 +47,7 @@ public class JAX_6_Custom_Test {
     private DescribedPredicate<JavaClass> haveAFunnyName() {
         return new DescribedPredicate<JavaClass>("have a funny name") {
             @Override
-            public boolean apply(JavaClass javaClass) {
+            public boolean test(JavaClass javaClass) {
                 return javaClass.getSimpleName().toUpperCase().contains("FUN");
             }
         };

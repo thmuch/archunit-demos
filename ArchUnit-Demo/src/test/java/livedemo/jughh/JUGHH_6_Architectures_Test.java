@@ -16,6 +16,7 @@ public class JUGHH_6_Architectures_Test {
     void conforms_to_layered_architecture(JavaClasses importedClasses) {
 
         ArchRule rule = layeredArchitecture()
+                .consideringAllDependencies()
                 .layer("Backend").definedBy("..backend..")
                 .layer("API").definedBy("..api..")
                 .layer("Frontend").definedBy("..frontend")

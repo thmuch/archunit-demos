@@ -1,6 +1,5 @@
 package extensions;
 
-import com.tngtech.archunit.base.Optional;
 import com.tngtech.archunit.core.domain.JavaField;
 import com.tngtech.archunit.core.domain.JavaMethod;
 import com.tngtech.archunit.lang.ArchCondition;
@@ -8,6 +7,7 @@ import com.tngtech.archunit.lang.ConditionEvents;
 import com.tngtech.archunit.lang.SimpleConditionEvent;
 import jakarta.persistence.*;
 
+import java.util.Optional;
 import java.util.regex.Pattern;
 
 public class Conditions {
@@ -94,7 +94,7 @@ public class Conditions {
                 if (elementCollection.isPresent()) {
                     return Optional.of(elementCollection.get().fetch());
                 }
-                return Optional.absent();
+                return Optional.empty();
             }
         };
     }

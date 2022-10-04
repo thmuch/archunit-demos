@@ -15,6 +15,7 @@ public class JUGH_5_Layers_Test {
         JavaClasses importedClasses = new ClassFileImporter().importPackages("com.muchsoft");
 
         ArchRule rule = layeredArchitecture()
+                .consideringAllDependencies()
                 .layer("Frontend").definedBy("..frontend..")
                 .layer("API").definedBy("..api..")
                 .layer("Backend").definedBy("..backend..")

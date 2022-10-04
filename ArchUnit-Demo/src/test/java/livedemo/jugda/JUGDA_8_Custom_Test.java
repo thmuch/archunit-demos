@@ -48,7 +48,7 @@ public class JUGDA_8_Custom_Test {
     private DescribedPredicate<JavaClass> haveAFunnyName() {
         return new DescribedPredicate<JavaClass>("have a funny name") {
             @Override
-            public boolean apply(JavaClass input) {
+            public boolean test(JavaClass input) {
                 return input.getSimpleName().toUpperCase().contains("FUN");
             }
         };

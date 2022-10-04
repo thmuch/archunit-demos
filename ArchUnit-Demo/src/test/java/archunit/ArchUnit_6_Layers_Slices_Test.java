@@ -19,6 +19,7 @@ public class ArchUnit_6_Layers_Slices_Test {
     public void adhere_to_layered_architecture(JavaClasses importedClasses) {
 
         ArchRule rule = layeredArchitecture()
+                .consideringAllDependencies()
                 .layer("Frontend").definedBy("..frontend..")
                 .layer("API").definedBy("..api..")
                 .layer("Backend").definedBy("..backend..")

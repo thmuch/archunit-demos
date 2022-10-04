@@ -15,6 +15,7 @@ public class JAX_5_Layers_Test {
         JavaClasses javaClasses = new ClassFileImporter().importPackages("com.muchsoft");
 
         ArchRule rule = layeredArchitecture()
+                .consideringAllDependencies()
                 .layer("Frontend").definedBy("..frontend..")
                 .layer("API").definedBy("..api..")
                 .layer("Backend").definedBy("..backend..")
