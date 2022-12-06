@@ -8,6 +8,7 @@ You'll find the examples provided by ArchUnit itself [here](https://github.com/T
 
 ## Talks & Slides & Videos
 
+- [betterCode() Clean Architecture](https://clean-architecture.bettercode.eu/veranstaltung-15459-se-0-archunit-architektur-und-design-automatisiert-testen.html), 2022-12-06 ([PDF](https://muchsoft.com/presentations/ArchUnit-betterCode-2022.pdf))
 - [Java User Group Hamburg](https://www.meetup.com/de-DE/jug-hamburg/events/283181442/), 2022-01-25 ([PDF](https://muchsoft.com/presentations/ArchUnit-JUGHH-2022.pdf))
 - [GEDOPLAN Expertenkreis Java](https://gedoplan.de/java-events/), 2021-03-18 ([PDF](https://muchsoft.com/presentations/ArchUnit-GEDOPLAN-2021.pdf))
 - [Java User Group Switzerland](https://www.jug.ch/html/events/2020/archunit.html), 2020-10-29 ([PDF](https://muchsoft.com/presentations/ArchUnit-JUGCH-2020.pdf), [Video](https://www.youtube.com/watch?v=_ZUtb_hsm4Q&t=263)) 🇬🇧
